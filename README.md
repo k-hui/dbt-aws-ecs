@@ -16,6 +16,10 @@ dbt on AWS ECS
 
 - https://docs.aws.amazon.com/AmazonECS/latest/developerguide/getting-started-aws-copilot-cli.html
 
+if no brew
+
+- https://brew.sh/
+
 ```bash
 brew install aws/tap/copilot-cli
 ```
@@ -32,6 +36,12 @@ pip install -r requirements.txt
 
 ```bash
 docker-compose up -d
+```
+
+### Local development
+
+```bash
+uvicorn main:app --host 0.0.0.0 --port 8080
 ```
 
 ### Useful commands
