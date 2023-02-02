@@ -1,0 +1,12 @@
+version: "3.1"
+
+services:
+  dbt:
+    container_name: dbt
+    image: postgres:14
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
