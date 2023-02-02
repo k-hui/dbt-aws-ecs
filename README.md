@@ -50,3 +50,22 @@ uvicorn main:app --host 0.0.0.0 --port 8080
 docker rmi $(docker images | grep 'dbt')
 docker rmi $(docker images | grep '<none>')
 ```
+
+## Deployment
+
+```bash
+copilot init
+```
+
+- follow the instructions
+
+```bash
+# create your environment
+copilot env init
+# deploy your environment.
+copilot env deploy --name dev
+# deploy your service
+copilot deploy
+# delete app
+copilot app delete
+```
