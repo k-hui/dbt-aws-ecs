@@ -60,6 +60,8 @@ cp exmaple.env api.env
 # type your database connection
 ```
 
+### Launch Docker Desktop
+
 ```bash
 copilot init
 ```
@@ -75,4 +77,19 @@ copilot env deploy --name dev
 copilot deploy
 # delete app
 copilot app delete
+```
+
+### Testing
+
+```bash
+curl -X POST \
+    -H "Content-Type: application/json" \
+    -d '{"cmd":"dbt debug --project-dir example --profiles-dir example"}' \
+     http://<YOUR_API_DOMAIN>/dbt
+```
+
+### Logging
+
+```bash
+copilot svc logs --env dev --since 5m | grep -v INFO
 ```
