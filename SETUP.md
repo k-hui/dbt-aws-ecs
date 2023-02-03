@@ -11,6 +11,17 @@ pip freeze > requirements.txt
 ```
 
 ```bash
+# initialize dbt project
+dbt init example
+# clone the profiles.yml to local project
+cp ~/.dbt/profiles.yml ./example
+# debug
+dbt debug --project-dir example --profiles-dir example
+# test dbt run
+dbt run --project-dir example --profiles-dir example
+```
+
+```bash
 copilot init
 
 copilot deploy
