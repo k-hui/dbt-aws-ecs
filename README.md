@@ -53,6 +53,13 @@ docker rmi $(docker images | grep '<none>')
 
 ## Deployment
 
+### Prepare environment
+
+```bash
+cp exmaple.env api.env
+# type your database connection
+```
+
 ```bash
 copilot init
 ```
